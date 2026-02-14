@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Creative Secure Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="card active" id="register">
+        <h2>Create Account</h2>
+
+        <div class="input-group">
+            <input type="text" id="rUser" required>
+            <label>Username</label>
+        </div>
+
+        <div class="input-group">
+            <input type="password" id="rPass" required>
+            <label>Password</label>
+        </div>
+
+        <button onclick="registerUser()">Register</button>
+
+        <p class="switch">
+            Already registered?
+            <span onclick="showLogin()">Login</span>
+        </p>
+        <p class="msg" id="rMsg"></p>
+    </div>
+
+    <div class="card" id="login">
+        <h2>Welcome Back</h2>
+
+        <div class="input-group">
+            <input type="text" id="lUser" required>
+            <label>Username</label>
+        </div>
+
+        <div class="input-group">
+            <input type="password" id="lPass" required>
+            <label>Password</label>
+        </div>
+
+        <button onclick="loginUser()">Login</button>
+
+        <p class="switch">
+            New user?
+            <span onclick="showRegister()">Register</span>
+        </p>
+        <p class="msg" id="lMsg"></p>
+    </div>
+
+    <div class="card" id="dashboard">
+        <h2>Secure Dashboard</h2>
+        <p>🎉 Access Granted</p>
+        <button onclick="logout()">Logout</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
